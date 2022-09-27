@@ -1,0 +1,3 @@
+for ip in $(cat acl_in.txt);
+do whois $ip | echo -e "$ip \n$(grep 'org-name\|address\|org\|country\|person')\n";
+done > whois.txt
